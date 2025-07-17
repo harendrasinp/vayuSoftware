@@ -15,7 +15,7 @@ const HeroComponent = () => {
         />
         <div className="w-full md:max-w-[25rem] flex flex-col gap-2 mt-4 md:mt-0">
           <p className="text-justify">{heroData.message1}</p>
-          <p className="text-justify libre-baskerville-regular">{heroData.message3}</p>
+          <p className="text-justify">{heroData.message3}</p>
           <p className="text-justify">
             <strong>{heroData.companyName} </strong>{heroData.message2}</p>
           <Vayubutton />
