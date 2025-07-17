@@ -5,7 +5,7 @@ export const items={
     },
     "about": {
         "name": "About",
-        "link": "/about"
+        "link": "#about"
     },
     "services": {
         "name": "Services",

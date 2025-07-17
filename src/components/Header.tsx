@@ -1,5 +1,6 @@
 import Ventabackground from "@/components/ventabackground/Ventabackground";
 import { items } from "@/content/headerItems/data";
+import Link from "next/link";
 
 
 type HeaderItem = {
@@ -27,9 +28,9 @@ const Header = () => {
         </div>
         <div className="flex items-center justify-between min-w-[30rem]">
           {headerItems.map((item, index) => (
-            <a key={index} href={item.link}>
+            <Link key={index} href={item.link}>
               <span className="ml-2">{item.name}</span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

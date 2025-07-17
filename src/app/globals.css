@@ -1,12 +1,16 @@
 
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 @theme{
   --color-chocolate: #900C3F;
   --color-bluegray: #34495e;
   --color-backgroundColor: #ebedef;
   --color-buttonColor: #283747;
   --color-buttonHoverColor: #17202a;
+  --color-aboutBackgorud:#300053
 }
 
 
