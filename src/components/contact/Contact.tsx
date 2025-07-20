@@ -1,5 +1,5 @@
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaXTwitter,FaUser} from "react-icons/fa6";
 import { contactData } from "@/content/contact/data";
 const Contact = () => {
     return (
@@ -15,6 +15,10 @@ const Contact = () => {
                     <div className="flex items-center gap-4">
                         <FaPhone className="text-indigo-400" />
                         <span>{contactData.phone}</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                        <FaUser className="text-indigo-400" />
+                        <span>{contactData.contactName}</span>
                     </div>
 
                     <div className="flex items-center gap-4">
