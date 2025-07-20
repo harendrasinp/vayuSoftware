@@ -3,12 +3,12 @@ import { AboutData } from "@/content/aboutUs/aboutData";
 const AboutUs = () => {
     return (
         <div>
-            <section id="about" className="bg-aboutBackgorud py-20 px-6 md:px-16">
+            <section id="about" className="bg-[url('/about/backgroundImg2.jpg')] bg-cover bg-center bg-no-repeat py-20 px-6 md:px-16">
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 className="text-4xl md:text-5xl font-bold text-amber-50 mb-6">
                         {AboutData.title}
                     </h2>
-                    <p className="text-lg md:text-xl text-amber-200 leading-relaxed max-w-3xl mx-auto">
+                    <p className="text-lg md:text-xl text-white leading-relaxed max-w-3xl mx-auto">
                         {AboutData.description}
                     </p>
 

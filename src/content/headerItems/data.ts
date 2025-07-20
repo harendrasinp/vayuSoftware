@@ -9,10 +9,14 @@ export const items={
     },
     "services": {
         "name": "Services",
-        "link": "/services"
+        "link": "#services"
     },
-    "contact": {
-        "name": "Contact",
-        "link": "/contact"
+    "plans": {
+        "name": "Plans",
+        "link": "#Plans"
+    },
+    "contactus": {
+        "name": "ContactUs",
+        "link": "#contact"
     }
 }
