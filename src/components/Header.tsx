@@ -31,7 +31,7 @@ const Header = () => {
             className="w-[5rem] sm:w-[6rem] h-fit"
           />
           <div className="text-[0.7rem] sm:text-sm text-shadow-fuchsia-50">
-            Visionary Applications for Users & Upliftment
+            Visionary Applications for Your Upliftment
           </div>
         </div>
 
@@ -57,35 +57,34 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu Dropdown */}
-     {/* Mobile Slide Menu (Right Sidebar) */}
-<div
-  className={`fixed top-0 right-0 h-full w-64 bg-black/80 bg-opacity-90 z-30 transform transition-transform duration-300 ease-in-out ${
-    isOpen ? "translate-x-0" : "translate-x-full"
-  } md:hidden`}
->
-  {/* Close Button */}
-  <div className="flex justify-end p-4">
-    <FiX
-      className="text-2xl text-white cursor-pointer"
-      onClick={() => setIsOpen(false)}
-    />
-  </div>
+      {/* Mobile Slide Menu (Right Sidebar) */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-black/80 bg-opacity-90 z-30 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
+          } md:hidden`}
+        >
+        {/* Close Button */}
+        <div className="flex justify-end p-4">
+          <FiX
+            className="text-2xl text-white cursor-pointer"
+            onClick={() => setIsOpen(false)}
+          />
+        </div>
 
-  {/* Menu Items */}
-  <div className="flex flex-col items-center space-y-6 mt-8">
-    {headerItems.map((item, index) => (
-      <Link
-        key={index}
-        href={item.link}
-        onClick={() => setIsOpen(false)}
-      >
-        <span className="text-white text-lg font-medium hover:text-fuchsia-400 transition">
-          {item.name}
-        </span>
-      </Link>
-    ))}
-  </div>
-</div>
+        {/* Menu Items */}
+        <div className="flex flex-col items-center space-y-6 mt-8">
+          {headerItems.map((item, index) => (
+            <Link
+              key={index}
+              href={item.link}
+              onClick={() => setIsOpen(false)}
+            >
+              <span className="text-white text-lg font-medium hover:text-fuchsia-400 transition">
+                {item.name}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
 
     </div>
   );

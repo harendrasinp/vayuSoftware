@@ -1,3 +1,10 @@
+export const pageDetail={
+    pageTitle:"Plans & Pricing",
+    pageDescription:"Choose a website development plan that suits your business needs and budget",
+    Note:"Note: Prices may vary based on specific client requirements."
+}
+
+
 export const Images = {   
     backgroundImage:"bg-[url('/plans/backgroundImg2.jpg')]",
 }
@@ -11,8 +18,7 @@ export const StarterPlan={
         "✅ Basic Contact Form",
         "❌ Admin Panel"
     ],
-    buttonText: "Get Started",
-    buttonClass: "bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-lg" 
+    buttonText: "Buy",
 }
 export const BusinessPlan={
     title: "Business",
@@ -23,8 +29,7 @@ export const BusinessPlan={
         "✅ Responsive Design",
         "✅ Basic SEO Setup"
     ],
-    buttonText: "Most Popular",
-    buttonClass: "bg-white text-indigo-600 hover:bg-gray-200 py-2 rounded-lg font-semibold"
+    buttonText: "Buy",
 }       
 export const PremiumPlan={
     title: "Premium",
@@ -35,6 +40,6 @@ export const PremiumPlan={
         "✅ Full SEO Optimization",
         "✅ Custom Features"
     ],
-    buttonText: "Contact Us",
-    buttonClass: "bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-lg"
+    buttonText: "Buy",
+   
 }   
