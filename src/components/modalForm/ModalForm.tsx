@@ -25,6 +25,7 @@ const ModalForm = () => {
     try {
       const res = await axios.post("https://vayusoftwarebackend.onrender.com/VayuApi/enquiry", formData);
       console.log("Data sent successfully:", res.data);
+      alert("Your Enquiry is successfully send to VayuSOftware.");
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Failed to submit form.");
