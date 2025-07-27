@@ -1,10 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
+interface prisingButton{
+    button:boolean
+}
+const initialState:prisingButton={
+    button:false
+}
 
 const pricingSlice = createSlice({
   name: 'counter', 
-  initialState:{button:false},  
+  initialState,  
   reducers: {      
     toggleButton:(state,action)=>{
         state.button=action.payload

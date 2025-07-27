@@ -2,41 +2,47 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleButton } from "@/reduxStore/pricingSlice";
-
+import axios from "axios";
 import { RootState } from '@/reduxStore/store';
 
-const ModalForm= () => {
-  const dispatch=useDispatch()
-  const isOpen=useSelector((state:RootState)=>state.pricing.button)
+const ModalForm = () => {
+  const dispatch = useDispatch()
+  const isOpen = useSelector((state: RootState) => state.pricing.button)
   const [formData, setFormData] = useState({
-    fullName: "",
-    address: "",
-    business: "",
-    phone: "",
-    email: "",
+    fullname: "",
+    Address: "",
+    BusinessName: "",
+    Phone: "",
+    Email: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
+    try {
+      const res = await axios.post("https://vayusoftwarebackend.onrender.com/VayuApi/enquiry", formData);
+      console.log("Data sent successfully:", res.data);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit form.");
+    }
     dispatch(toggleButton(false));
     setFormData({
-      fullName: "",
-      address: "",
-      business: "",
-      phone: "",
-      email: "",
+      fullname: "",
+      Address: "",
+      BusinessName: "",
+      Phone: "",
+      Email: "",
     });
   };
 
   return (
     <div>
-  
-      {isOpen? (
+
+      {isOpen ? (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg shadow-lg w-full max-w-lg p-6 relative">
             <button
@@ -49,44 +55,44 @@ const ModalForm= () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
-                name="fullName"
+                name="fullname"
                 placeholder="Full Name"
-                value={formData.fullName}
+                value={formData.fullname}
                 onChange={handleChange}
                 className="w-full border px-3 py-2 rounded"
                 required
               />
               <input
                 type="text"
-                name="address"
+                name="Address"
                 placeholder="Address"
-                value={formData.address}
+                value={formData.Address}
                 onChange={handleChange}
                 className="w-full border px-3 py-2 rounded"
                 required
               />
               <input
                 type="text"
-                name="business"
+                name="BusinessName"
                 placeholder="Your Business"
-                value={formData.business}
+                value={formData.BusinessName}
                 onChange={handleChange}
                 className="w-full border px-3 py-2 rounded"
               />
               <input
                 type="tel"
-                name="phone"
+                name="Phone"
                 placeholder="Phone Number"
-                value={formData.phone}
+                value={formData.Phone}
                 onChange={handleChange}
                 className="w-full border px-3 py-2 rounded"
                 required
               />
               <input
                 type="email"
-                name="email"
+                name="Email"
                 placeholder="Email Address"
-                value={formData.email}
+                value={formData.Email}
                 onChange={handleChange}
                 className="w-full border px-3 py-2 rounded"
                 required
@@ -100,7 +106,7 @@ const ModalForm= () => {
             </form>
           </div>
         </div>
-      ):null}
+      ) : null}
     </div>
   );
 };
