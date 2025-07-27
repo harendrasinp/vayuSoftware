@@ -36,7 +36,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="w-[25rem] hidden md:mr-10 md:flex md:justify-between text-[1.2rem] ">
+        <div className="w-[30rem] hidden md:mr-10 md:flex md:justify-between text-[1.2rem] ">
           {headerItems.map((item, index) => (
             <Link key={index} href={item.link}>
               <span className="hover:text-fuchsia-300 transition">{item.name}</span>
@@ -71,7 +71,7 @@ const Header = () => {
         </div>
 
         {/* Menu Items */}
-        <div className="flex flex-col items-center space-y-6 mt-8">
+        <div className="flex flex-col items-center space-y-10 mt-8">
           {headerItems.map((item, index) => (
             <Link
               key={index}

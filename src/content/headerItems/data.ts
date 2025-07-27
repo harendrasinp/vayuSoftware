@@ -18,5 +18,9 @@ export const items={
     "contactus": {
         "name": "ContactUs",
         "link": "#contact"
+    },
+    "Admin Login": {
+        "name": "Admin Login",
+        "link": "#contact"
     }
 }
