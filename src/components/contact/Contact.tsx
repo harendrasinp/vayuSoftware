@@ -44,7 +44,7 @@ const Contact = () => {
                         <FaFacebookF />
                     </a>
                     <a
-                        href="https://instagram.com/yourpage"
+                        href="https://www.instagram.com/vayusoftware/profilecard/?igsh=MTg5Nm1lMzVpYnA5Nw%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white transition"
