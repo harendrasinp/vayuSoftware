@@ -36,7 +36,7 @@ const Contact = () => {
 
                 <div className="flex justify-center gap-6 text-indigo-400 text-2xl">
                     <a
-                        href="https://facebook.com/yourpage"
+                        href=""
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white transition"
@@ -52,7 +52,7 @@ const Contact = () => {
                         <FaInstagram />
                     </a>
                     <a
-                        href="https://twitter.com/yourpage"
+                        href=""
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white transition"
