@@ -1,5 +1,5 @@
 import { heroData } from "@/content/hero/data"
-
+import Image from "next/image"
 import Vayubutton from "../button/button"
 
 const HeroComponent = () => {
@@ -9,9 +9,11 @@ const HeroComponent = () => {
       <p className="text-[var(--color-chocolate)] text-[1rem] md:text-[1.1rem] font-bold text-center">{heroData.subtitle}</p>
       <p className="text-[var(--color-chocolate)] text-[1rem] md:text-[1.1rem] font-bold text-center">{heroData.description}</p>
       <div className="flex flex-col md:flex-row justify-center items-center p-2 md:gap-10 gap-6 w-full">
-        <img
+        <Image
           className="w-[30rem] md:max-w-[45rem] md:max-h-[20rem] rounded-md shadow-lg shadow-black/40 object-cover"
           src={heroData.image}
+          width={800}   
+          height={800} 
           alt="lady-hero-image"
         />
         <div className="w-full md:max-w-[25rem] flex flex-col gap-2 mt-4 md:mt-0">
