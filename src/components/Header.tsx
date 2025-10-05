@@ -25,7 +25,7 @@ const Header = () => {
             alt="logo"
             className="w-[5rem] sm:w-[6rem] h-fit"
           />
-          <div className="text-[0.7rem] sm:text-sm text-shadow-fuchsia-50">
+          <div className="mt-9 text-[0.7rem] sm:text-sm text-shadow-fuchsia-50">
             Visionary Applications for Your Upliftment
           </div>
         </div>
