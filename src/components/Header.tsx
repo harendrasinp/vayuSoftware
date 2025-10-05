@@ -15,7 +15,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 bg-neutral-950 h-[6rem] flex items-center justify-between text-white overflow-hidden px-4">
+    <div className="sticky top-0 z-10 bg-neutral-950 h-[6rem] flex items-center justify-between text-white overflow-hidden px-4">
       {/* Foreground Content */}
       <div className="relative z-10 flex items-center justify-between w-full">
         {/* Logo & Tagline */}
