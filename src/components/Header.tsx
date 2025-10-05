@@ -1,5 +1,5 @@
 'use client';
-import Ventabackground from "@/components/ventabackground/Ventabackground";
+
 import { items } from "@/content/headerItems/data";
 import Link from "next/link";
 import { useState } from "react";
@@ -15,12 +15,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative h-[6rem] flex items-center justify-between text-white overflow-hidden px-4">
-      {/* Background Animation */}
-      <div className="absolute inset-0 w-full h-full z-0">
-        <Ventabackground />
-      </div>
-
+    <div className="sticky top-0 bg-neutral-950 h-[6rem] flex items-center justify-between text-white overflow-hidden px-4">
       {/* Foreground Content */}
       <div className="relative z-10 flex items-center justify-between w-full">
         {/* Logo & Tagline */}
