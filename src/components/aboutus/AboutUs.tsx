@@ -3,39 +3,35 @@ import { AboutData } from "@/content/aboutUs/aboutData";
 
 const AboutUs = () => {
     return (
-        <div className="relative">
-            {/* Background Image */}
+        <section id="about" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+            {/* Background Image covers the section fully and responsively */}
             <Image
-                src="/about/bg4.png" // public folder me image
+                src="/about/bg4.png"
                 alt="About Background"
-                fill       // full parent cover
-                className="object-cover"
-                priority   // fast load
+                fill
+                className="object-cover z-0"
+                priority
             />
-
-            {/* Content on top of background */}
-            <section id="about" className="relative z-10 py-20 px-6 md:px-16">
-                <div className="max-w-6xl mx-auto text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold text-amber-50 mb-6">
-                        {AboutData.title}
-                    </h2>
-                    <p className="text-lg md:text-xl text-white leading-relaxed max-w-3xl mx-auto">
-                        {AboutData.description}
-                    </p>
-
-                    <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                        {AboutData.services.map((service, index) => (
-                            <div key={index} className="bg-white shadow-lg p-6 rounded-xl hover:scale-110 transition-transform duration-600 cursor-pointer">
-                                <h3 className="text-xl font-semibold text-aboutBackgorud mb-2">
-                                    {service.icon} {service.title}
-                                </h3>
-                                <p className="text-aboutBackgorud">{service.description}</p>
-                            </div>
-                        ))}
-                    </div>
+            {/* Content stays inside the section, above the background */}
+            <div className="relative flex flex-col items-center justify-center text-center text-white w-full h-full px-4 sm:px-6 md:px-12 py-16">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-amber-50 mb-6">
+                    {AboutData.title}
+                </h2>
+                <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed max-w-3xl mx-auto">
+                    {AboutData.description}
+                </p>
+                <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 text-left w-full max-w-6xl mx-auto">
+                    {AboutData.services.map((service, index) => (
+                        <div key={index} className="bg-white w-full max-w-xs shadow-lg p-6 md:p-10 rounded-xl hover:scale-105 transition-transform duration-300 cursor-pointer mx-auto">
+                            <h3 className="text-xl font-semibold text-black mb-2 b">
+                                {service.icon} {service.title}
+                            </h3>
+                            <p className="text-black">{service.description}</p>
+                        </div>
+                    ))}
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 }
 
