@@ -12,7 +12,7 @@ const PricingPlans = () => {
     }
 
     return (
-        <section className={`${Images.backgroundImage} bg-cover bg-center bg-no-repeat py-16 px-4 md:px-8 lg:px-20`} id="Plans">
+        <section className={`${Images.backgroundImage} scroll-mt-11 bg-cover bg-center bg-no-repeat py-16 px-4 md:px-8 lg:px-20`} id="Plans">
             <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-white mb-4">{pageDetail.pageTitle}</h2>
                 <p className="text-blue-950 font-extrabold max-w-2xl mx-auto">

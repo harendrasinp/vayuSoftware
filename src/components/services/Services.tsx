@@ -2,7 +2,7 @@ import { services } from "@/content/services/data";
 import Image from "next/image";
 export default function Services() {
   return (
-    <section id="services" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="services" className="scroll-mt-11 relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image covers the section fully and responsively */}
       <Image src="/services/backgroundImg2.jpg" alt="service bg" fill className="object-cover z-0" priority />
       {/* Content stays inside the section, above the background */}

@@ -3,7 +3,7 @@ import { AboutData } from "@/content/aboutUs/aboutData";
 
 const AboutUs = () => {
     return (
-        <section id="about" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+        <section id="about" className="scroll-mt-11 relative w-full min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image covers the section fully and responsively */}
             <Image
                 src="/about/bg4.png"
